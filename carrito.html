@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Inicio</title>
+        <meta charset="UTF-8">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-sYXQwQ6I51yJ4v0dcIFUTy/cRE1hGjxHT+76wJQ5ubnIY10zrvgPQzRrEaWQ5sNxgpQ6ue7+PGw1NR4kGa9dQQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+    </head>
+
+    <style>
+        .social-icon {
+  color: white;
+  font-size: 30px;
+}
+
+        ul
+        {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            overflow:hidden;
+            background-color: white;
+        }
+        li
+        {
+            float: left;    
+        }
+        li a
+        {
+            margin-left: 10px;
+            background-color: rgb(255, 255, 255);
+            display: block;
+            color: black;
+            font-family:Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: 0.3 ease;
+        }
+        header
+        {
+            font-size: 60px;
+            font-style: italic;
+        }
+        footer
+        {
+            background-color: #c10015;
+            color: rgb(255, 216, 216);
+        }
+        footer a
+        {
+            color: rgb(255, 216, 216);
+        }
+        .cont
+        {
+            color: white;
+            width: 1300px;
+            height: 600px;
+            transition: 0.3s ease;
+            text-align: center;
+            vertical-align: middle;
+        }
+        .cont img
+        {
+            width: 100%;
+            height: 80%;
+        }
+        .cont:hover,.cont:hover a
+        {
+            color: black;
+        }
+        .cont a
+        {
+            color: white;
+        }
+        a {
+            text-decoration: none;
+            color: black; /* Color del texto */
+            position: relative;
+        }
+
+        a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px; /* Grosor del subrayado */
+            background-color:#c10015; /* Color del subrayado */
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-out;
+        }
+
+        a:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        .carousel {
+            width: 100%; /* Puedes cambiarlo a un valor fijo como 600px */
+            width: 600px; height: 200px; /* Ajusta este valor según sea necesario */
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+        }
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 750px; height: 200px;
+        }
+        .carousel img {
+            width: 400px;
+            height: 100%; /* Asegura que las imágenes ocupen todo el contenedor */
+            object-fit: cover; /* Ajusta la imagen para cubrir el contenedor sin deformarla */
+        }
+        .carousel input {
+            display: none;
+        }
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+        }
+        .carousel-indicators label {
+            background-color: #ccc;
+            border-radius: 50%;
+            cursor: pointer;
+            height: 10px;
+            margin: 0 5px;
+            width: 10px;
+        }
+        input:nth-child(1):checked ~ .carousel-images {
+            transform: translateX(0);
+        }
+        input:nth-child(2):checked ~ .carousel-images {
+            transform: translateX(-100%);
+        }
+        input:nth-child(3):checked ~ .carousel-images {
+            transform: translateX(-200%);
+        }
+        input:nth-child(4):checked ~ .carousel-images {
+            transform: translateX(-300%);
+        }
+        .carousel input:nth-child(1):checked ~ .carousel-indicators label:nth-child(1),
+        .carousel input:nth-child(2):checked ~ .carousel-indicators label:nth-child(2),
+        .carousel input:nth-child(3):checked ~ .carousel-indicators label:nth-child(3),
+        .carousel input:nth-child(4):checked ~ .carousel-indicators label:nth-child(4) {
+            background-color: #333;
+        }
+        .carousel-button {
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 18px;
+            padding: 10px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .carousel-button.prev {
+            left: 10px;
+        }
+        .carousel-button.next {
+            margin-left: 220px;
+            position: absolute;
+        }
+        .divfoot
+        {
+            
+            text-align: justify;
+            margin-right: 40px;
+            width: 30%;
+            height: auto;
+            padding: 15px;
+            font-style: oblique;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        input
+        {
+            border-radius: 40px; border: none; height: 50px; width: 250px; background-color: #cdcdcd;
+        }
+        input::placeholder
+        {
+            color: #000000;
+        }
+        .enviar
+        {
+            border-radius: 50px;
+            height: 50px;
+            width: 50px;
+            border: none;
+            transition: 0.3s;
+        }
+        .enviar:hover
+        {
+            background-color: #cacaca;
+        }
+        footer
+    {
+        background-color: #c10015;
+        color: #ffffff; 
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+    </style>
+
+
+
+        <header>
+            
+            <center>Cartier</center>     
+            <hr color=#c10015>
+        </header>
+
+    <body>
+        <ul>
+            <li>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="altajoyeria.html">Alta Joyeria</a></li>
+            <li><a href="joyeria.html">Joyeria</a></li>
+            <li><a href="relojes.html">Relojes</a></li>
+            <li style="float: right;"><a style="background-color: #c10015; color: aliceblue;" href="../Profile.php"><i class="far fa-user"></i></a></li>
+            <li style="float: right;"><a style="background-color: #c10015; color: aliceblue;" href="../cart.php"><i class="fas fa-shopping-cart"></i>
+            </a></li>
+        </ul> 
+        <br> <br><br>
+
+        <center>
+            <section style="background-color: white; border: 2px solid black; width: 700px; padding: 20px;" class="carro">
+                <h1 style="font-style: oblique; font-size: 70px;">Cartier</h1>
+                <hr>
+                <h2 style="text-align: center; font-size: 24px; margin-bottom: 20px;">Carrito de compras</h2>
+                <hr>
+                <ul style="list-style: none; padding: 0; margin: 0; font-size: 20px; width: 50%; border: 1px solid black;" class="cart-list"></ul>
+                <p class="total" style="font-size: 20px; margin-top: 20px;">Total de la compra:  €<span class="total-value" style="font-weight: bold;">0.00</span></p>
+                <hr>            
+                <p class="iva" style="font-size: 20px;">IVA: €<span class="iva-value" style="font-weight: bold;">0.00</span></p>
+                <hr>
+                <p class="total-with-iva" style="font-size: 20px;">Total con IVA:  €<span class="total-with-iva-value" style="font-weight: bold;">0.00</span></p>
+                <button class="agregaralcarrito pagar" style="margin-top: 20px; padding: 10px 20px; font-size: 18px; background-color: #c10015; color: white; border: none; border-radius: 4px; cursor: pointer;">Pagar carrito</button>
+                <button class="agregaralcarrito clear-cart" style="margin-top: 20px; margin-left: 10px; padding: 10px 20px; font-size: 18px; background-color: #333; color: white; border: none; border-radius: 4px; cursor: pointer;">Vaciar carrito</button>
+                <br><br>
+            </section>
+        </center>
+        
+        <br><br><br>
+    </body>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 2;
+
+        function changeSlide(direction) {
+        currentSlide += direction;
+        if (currentSlide < 1) {
+        currentSlide = totalSlides;
+        } else if (currentSlide > totalSlides) {
+        currentSlide = 1;
+        }
+        document.getElementById('slide' + currentSlide).checked = true;
+        }
+    </script>
+    <script src="script.js"></script>
+
+
+<footer>
+    <div class="divfoot">
+        <h2>Contacto:</h2>
+        <h4> Sebastian Rojas Mata</h4>
+        <h4>4-J</h4>
+        <h4>sebas3000@cartier.com</h4>
+        <h5>Programacion</h5>
+    </div>
+
+    <div class="divfoot">
+        <h2> Redes Sociales:</h2>
+        <h4> Facebook <i class="fab fa-facebook-f social-icon"> </i></h4>
+        <h4>Instagram <i class="fab fa-instagram social-icon"></i></h4>
+        <h4>Whatsapp: 6561234567 <i class="fab fa-whatsapp social-icon"></i></h4>
+        
+    </div>
+
+    <div class="divfoot">
+        <h3>Información y ayuda para clientes</h3>
+        <br>
+        
+        <input type="text" placeholder="sebas3000@cartier.com"> <button class="enviar">Enviar</button>
+        <br><br>
+        COPYRIGHT © 2024 CARTIER
+        
+    </div>
+</html>
